@@ -55,6 +55,13 @@ public class MagicSquare
         return false;
       }
       total = 0;
+      for (int v = 0; v < array.length; v++) {
+        total += array[v][array.length - 1 - v];
+      }
+      if (total != mNum) {
+        return false;
+      }
+      total = 0;
         return true;   // complete this method
     }
 
